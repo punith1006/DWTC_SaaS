@@ -8,10 +8,6 @@ Navigating mega-exhibitions like **Gulfood 2026** poses severe logistical challe
 * **Distance-Aware Journey Planner:** Intelligent itinerary generation that clusters meetings by venue and injects 45-minute transit buffers via Google Routes API.
 * **Live Operational Telemetry:** Real-time organizer dashboards tracking search queries, sector heatmaps, and exhibitor lead capture as they happen.
 
-## Platform Walkthrough
-
-<img width="4800" height="3840" alt="gulfood-banner" src="https://github.com/user-attachments/assets/cf7e7fc0-cae7-4344-8c6b-cff5477ebde1" />
-
 ## Design & Architecture
 
 <img width="5370" height="3210" alt="image" src="https://github.com/user-attachments/assets/6066c0bb-ae0c-42cf-8b36-0dffd5322ca2" />
