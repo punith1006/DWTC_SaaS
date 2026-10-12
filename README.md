@@ -14,6 +14,8 @@ Navigating mega-exhibitions like **Gulfood 2026** poses severe logistical challe
 
 ## Design & Architecture
 
+<img width="5370" height="3210" alt="image" src="https://github.com/user-attachments/assets/6066c0bb-ae0c-42cf-8b36-0dffd5322ca2" />
+
 ## Features & Capabilities
 
 ## Project Structure
