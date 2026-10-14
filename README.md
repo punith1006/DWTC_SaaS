@@ -118,3 +118,82 @@ Gulfood AI Assistant transforms mega-event operations from fragmented, reactive 
 
 
 ## Project Structure
+
+The codebase is organized as a modular, type-safe full-stack monorepo separating client presentation, backend microservices, shared database contracts, and automated ingestion pipelines:
+
+```bash
+GulfoodAIAssistant/
+├── Arch-Diagrams/                     # Publication-grade system architecture & HLD assets
+│   ├── Gulfood_Master_System_Architecture_HLD.png # 300 DPI master HLD raster diagram
+│   ├── Gulfood_Master_System_Architecture_HLD.svg # Lossless vector format diagram
+│   ├── generate_gulfood_visual_hld.py # Matplotlib visual HLD generator script
+│   └── README.md                      # Architectural domain specification & VC ROI analysis
+│
+├── client/                            # Frontend Presentation Tier (React 18 + Vite)
+│   ├── src/
+│   │   ├── components/                # Modular UI & feature components
+│   │   │   ├── AIChatbot.tsx          # "Faris" multilingual AI copilot floating widget
+│   │   │   ├── AnalyticsDashboard.tsx # Real-time SQL telemetry charts & sector heatmaps
+│   │   │   ├── AppointmentSlotPicker.tsx # Google Calendar slot booking interface
+│   │   │   ├── CompanyAnalyzer.tsx    # 3-Phase exhibitor assessment & sizing UI
+│   │   │   ├── ExhibitorDirectory.tsx # 2,400+ searchable exhibitor cards & hall badges
+│   │   │   ├── ReferralShareCard.tsx  # Viral social share & registration attribution card
+│   │   │   ├── VenueNavigation.tsx    # 12 km DWTC ↔ DEC dual-venue corridor transit guide
+│   │   │   └── ui/                    # shadcn/ui accessible primitives (Radix UI)
+│   │   │
+│   │   ├── pages/                     # Application routes & view controllers
+│   │   │   ├── Home.tsx               # Main public portal & conversational discovery
+│   │   │   ├── Itinerary.tsx          # 1-to-5 day multi-day balanced journey planner
+│   │   │   ├── Exhibitors.tsx         # Filterable catalog (halls, sectors, countries)
+│   │   │   ├── ExhibitorVerify.tsx    # Token-based passwordless exhibitor access
+│   │   │   ├── ExhibitorDashboard.tsx # Exhibitor lead CRM & co-searched brand telemetry
+│   │   │   ├── OrganizerLogin.tsx     # Organizer administrative credentials portal
+│   │   │   └── OrganizerAdmin.tsx     # Operations command cockpit & flash broadcast pusher
+│   │   │
+│   │   ├── hooks/                     # Custom React hooks (use-toast, use-mobile)
+│   │   ├── lib/                       # Query client setup & frontend utility helpers
+│   │   └── App.tsx                    # Top-level client router (Wouter) & provider tree
+│   │
+│   └── index.html                     # HTML5 entry shell & meta tags
+│
+├── server/                            # Backend Application Server (Node.js 20 LTS + Express)
+│   ├── analytics/                     # Second-by-second SQL aggregation engines
+│   │   ├── journeyMetrics.ts          # Itinerary counts, completion rates & ranking
+│   │   ├── visitorSegments.ts         # Role, intent & organization breakdowns
+│   │   ├── journeyDistributions.ts    # Sector interest heatmaps & attendance dates
+│   │   ├── sentimentTopics.ts         # Real-time chat sentiment & unaddressed inquiries
+│   │   └── cache.ts                   # In-memory analytics caching layer
+│   │
+│   ├── middleware/
+│   │   └── auth.ts                    # JWT organizer guard & exhibitor token validator
+│   │
+│   ├── assessmentEvaluator.ts         # Phase 3 LLM auditor with anti-inflation truth policy
+│   ├── companyResearch.ts             # Phase 1 corporate web crawler with 7-day TTL cache
+│   ├── intelligentScoring.ts          # Phase 2 4D fit algorithm (Product, Goal, Market, ROI)
+│   ├── ragEmailService.ts             # 3-tier autonomous inbound email RAG processor
+│   ├── emailAnalyzer.ts               # Inbound email intent & confidence classification
+│   ├── emailReply.ts                  # Contextual email generation with .ics attachments
+│   ├── emailService.ts                # Resend SMTP transactional dispatch wrapper
+│   ├── googleCalendar.ts              # Google Calendar API integration & Meet provisioning
+│   ├── pdfGenerator.ts                # Server-side meeting dossier & transcript compiler (pdfmake)
+│   ├── routes.ts                      # 55+ type-safe REST endpoints & HMAC webhook receivers
+│   ├── storage.ts                     # Database abstraction interface (IStorage) implementation
+│   ├── db.ts                          # Drizzle ORM connection pool to Neon Serverless PostgreSQL
+│   └── index.ts                       # Express server bootstrapping & Vite dev server bridge
+│
+├── shared/                            # Universal Contracts & Data Layer
+│   └── schema.ts                      # PostgreSQL Drizzle schema, Zod validators & 24-to-6 sector map
+│
+├── scripts/                           # Database Seeding & Data Pipeline Utilities
+│   ├── seed-admin.ts                  # Seeds root organizer administrative credentials
+│   ├── seed-analytics-demo.ts         # Generates mock telemetry data for dashboard demos
+│   ├── import-exhibitors.ts           # Imports raw DWTC exhibitor CSV data
+│   ├── ingest-dec-exhibitors.ts       # Parses & loads DEC Expo City exhibitor data
+│   └── replace-exhibitors.ts          # Rebuilds the unified 2,400+ exhibitor catalog
+│
+├── drizzle.config.ts                  # Drizzle ORM configuration & database migration paths
+├── tailwind.config.ts                 # Design system tokens, color palettes & typography
+├── tsconfig.json                      # Strict TypeScript compiler options & path aliases (`@/*`, `@shared/*`)
+├── vite.config.ts                     # Vite build configuration, asset aliases & proxy rules
+└── package.json                       # Project dependencies, scripts & engine specifications
+
