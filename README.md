@@ -77,23 +77,7 @@ Gulfood AI Assistant transforms mega-event operations from fragmented, reactive 
 
 ---
 
-### 5. Token-Authenticated Exhibitor Portal & Live Lead CRM
-
-* **Frictionless Magic Token Verification:** Exhibitors access their dedicated dashboard (`/exhibitor/verify`) via unique, cryptographically generated tokens (`exhibitor_access_codes`), removing login barriers and lost passwords.
-* **Contextual Lead Capture Engine:** Tracks inbound trade buyer inquiries categorized by capture origin (`direct`, `conversational`, `contextual`) with buyer role, target sectors, and timestamps.
-* **Live Exhibitor Analytics Console:**
-  * Total booth appearances in attendee itineraries
-  * Unique visitor reach & 7-day impression trends
-  * Breakdown of visitor job titles & procurement intents
-  * Co-searched competitor rankings & market share analysis
-  * Week-over-week engagement velocity
-* **Value Creation & Impact:**
-  * **High Exhibitor Renewal Rates:** Gives exhibitors undeniable, real-time proof of booth footfall and buyer lead volume during the show.
-  * **Instant Follow-Up:** Enables sales reps to download verified lead CSVs directly from their phone on the show floor.
-
----
-
-### 6. Two-Way B2B Meeting Broker & Google Calendar Sync
+### 5. Two-Way B2B Meeting Broker & Google Calendar Sync
 
 * **Native Calendar Synchronization:** Seamlessly books B2B appointments directly against organizer and exhibitor schedules via the **Google Calendar API**.
 * **Dynamic Video Conference Links:** Automatically provisions unique **Google Meet** links for hybrid or virtual buyer discussions.
@@ -105,7 +89,7 @@ Gulfood AI Assistant transforms mega-event operations from fragmented, reactive 
 
 ---
 
-### 7. Real-Time Operational Cockpit & Second-by-Second Telemetry
+### 6. Real-Time Operational Cockpit & Second-by-Second Telemetry
 
 * **Sub-100ms SQL Analytics Engine:** Executes live aggregations across PostgreSQL tables (`chat_conversations`, `journey_plans`, `leads`, `quick_action_clicks`) with auto-refreshing telemetry.
 * **Key Organizer Metrics:**
@@ -116,36 +100,6 @@ Gulfood AI Assistant transforms mega-event operations from fragmented, reactive 
 * **Live Flash Broadcast Pusher:** Allows organizers to broadcast critical show-floor updates (stage keynotes, emergency alerts, transport shuttles) straight to active attendee screens based on role tags (`All`, `Visitors`, `Exhibitors`).
 * **Value Creation & Impact:**
   * **Zero-Lag Crowd Management:** Replaces the 3-week post-event reporting delay with second-by-second floor visibility, allowing organizers to dynamically steer attendee flow to under-visited halls.
-
----
-
-### 8. High-Throughput Search & 24-to-6 Sector Normalizer
-
-* **Accent- & Punctuation-Insensitive Search:** Instant filtering across 2,400+ indexed exhibitors, stand codes, countries, and product descriptions with `<100ms` response times.
-* **24-to-6 Sector Normalization Engine:** Systematically maps 24 granular food trade categories (e.g., *Halal Products*, *Kosher*, *Fats & Oils*, *Catering Equipment*, *Plant-Based & Vegan*) into 6 canonical exhibition halls.
-* **Keyword Matching Lexicon:** Curated semantic dictionary containing hundreds of sector-specific keywords to ensure natural search phrases resolve to the correct booth locations.
-* **Value Creation & Impact:**
-  * **Instant Discovery:** Buyers find hard-to-locate specialty suppliers (e.g., cold-pressed organic oils) in milliseconds.
-  * **Eliminates Catalog Inconsistencies:** Automatically resolves differences between printed event directories and online booth registrations.
-
----
-
-### 9. Viral Referral Engine & Growth Mechanics
-
-* **Built-in Referral Tracking:** Generates unique, shareable referral tokens (`referrals`) for trade attendees and delegators.
-* **Multi-Platform Social Sharing:** 1-click sharing cards optimized for LinkedIn, WhatsApp, X (Twitter), and direct email invites.
-* **Attribution & Conversion Analytics:** Tracks click-throughs, device user agents, and registration conversions per referrer.
-* **Value Creation & Impact:**
-  * **Organic K-Factor Growth:** Turns every registered buyer into an active promoter, driving compounding pre-show registration velocity without paid marketing acquisition cost.
-
----
-
-### 10. Multi-Event Reusability & Horizontal Architecture
-
-* **Decoupled Configuration Architecture:** The core AI, routing, and telemetry microservices are completely agnostic to Gulfood-specific data schemas.
-* **Turnkey Multi-Event Deployment:** By swapping exhibitor datasets, venue geo-coordinates, and calendar dates, the platform can be deployed across other DWTC mega-exhibitions (e.g., **GITEX Global**, **Arab Health**, **The Big 5**, and the **Dubai Airshow**).
-* **Value Creation & Impact:**
-  * **Horizontal TAM Expansion:** Converts a single-event tool into a recurring, enterprise-grade Exhibition Operating System (EventOS).
 
 ---
 
@@ -160,8 +114,6 @@ Gulfood AI Assistant transforms mega-event operations from fragmented, reactive 
 | **Exhibitor Portal** | Token auth, real-time CRM, competitor co-search | Exhibitors & Sponsors | Higher booth renewals; immediate verified lead downloads |
 | **Meeting Broker** | Google Calendar API, Meet links, .ics attachments | Buyers & Exhibitors | Automated hybrid B2B deal-making with zero timezone errors |
 | **Organizer Cockpit** | Live SQL telemetry, flash broadcast, sector heatmaps | Event Organizers | Second-by-second steering vs. 3-week survey lag |
-| **Search Engine** | 24-to-6 sector normalizer, PostgreSQL B-Tree indexes | All Attendees | Sub-100ms multi-field search across 2,400+ brands |
-| **Referral Engine** | Share widgets, attribution tracking, UTM capture | Attendees & Marketing | Compounding organic viral registration loop |
 | **Horizontal Engine** | Schema-isolated config substrate | Enterprise Leadership | Reusable across GITEX, Arab Health, and global expos |
 
 
