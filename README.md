@@ -123,12 +123,6 @@ The codebase is organized as a modular, type-safe full-stack monorepo separating
 
 ```bash
 GulfoodAIAssistant/
-├── Arch-Diagrams/                     # Publication-grade system architecture & HLD assets
-│   ├── Gulfood_Master_System_Architecture_HLD.png # 300 DPI master HLD raster diagram
-│   ├── Gulfood_Master_System_Architecture_HLD.svg # Lossless vector format diagram
-│   ├── generate_gulfood_visual_hld.py # Matplotlib visual HLD generator script
-│   └── README.md                      # Architectural domain specification & VC ROI analysis
-│
 ├── client/                            # Frontend Presentation Tier (React 18 + Vite)
 │   ├── src/
 │   │   ├── components/                # Modular UI & feature components
